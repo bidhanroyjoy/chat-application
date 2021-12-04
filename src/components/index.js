@@ -6,6 +6,9 @@ import TeamChannelPreview from './TeamChannelPreview';
 import ChannelInner from './ChannelInner';
 import CreateChannel from './CreateChannel';
 import EditChannel from './EditChannel';
+import UserList from './UserList';
+import TeamMessage from './TeamMessage';
+import ResultsDropdown from './ResultsDropdown';
 import Auth from './Auth';
 
 export{
@@ -18,6 +21,10 @@ export{
     ChannelInner,
     CreateChannel,
     EditChannel,
+    UserList,
+    ResultsDropdown,
+    TeamMessage,
+
 }
 
 

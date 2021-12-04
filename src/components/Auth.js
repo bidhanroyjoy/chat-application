@@ -13,11 +13,11 @@ const initialState = {
     confirmPassword: '',
     phoneNumber: '',
     avatarURL: '',
-}    
+}
 
 const Auth = () => {
-    const [isSignup, setIsSignup] = useState(true);
     const [form, setForm] = useState(initialState);
+    const [isSignup, setIsSignup] = useState(true);
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -34,7 +34,7 @@ const Auth = () => {
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, fullName: form.fullName, phoneNumber, avatarURL,
         });
-            
+
         cookies.set('token', token);
         cookies.set('username', username);
         cookies.set('fullName', fullName);
